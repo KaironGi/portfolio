@@ -1,0 +1,263 @@
+<!--Defini que o documento é HTML5-->
+<!DOCTYPE html>
+
+<!-- Define o idioma da pagina-->
+ <html lang="pt-BR">
+    <head>
+        <!--Define codificacao para suportar acentos-->
+        <meta charset="UTF-8">
+        <!--Faz o site ficar responsivo no celular (MUITO IMPORTANTE)-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Titulo da aba do site-->
+        <title>Portfólio</title>
+
+        <!-- Importa a fonte poppins-->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+         <!--Linka o Css-->
+         <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!--|||||||HEADER|||||||-->
+        <!-- Cabecalho fixo com navegação-->
+         <header class="header">
+            <div class="contaiter nav">
+                <!--Logo-->
+                <h2 class="logo">Portfólio</h2>
+
+                <!--Navegacao-->
+                <nav class="menu">
+                    <!--Cada link leva a uma secao da pagina-->
+                    <a href="#sobre">Sobre</a>
+                    <a href="#projetos">Projetos</a>
+                    <a href="#cabilidades">Habilidades</a>
+                    <a href="#contato">Contato</a>
+
+                </nav>
+                <!--Botao exclusivo do mobile-->
+                    <div class="menu-toggle" id="menu-toggle">
+                        ☰
+                    </div>
+
+            </div>
+         </header>
+
+         <!--|||||||HERO|||||||-->
+         <!--Primeira secao da pagina-->
+         <section class="hero">
+            <div class="hero-content">
+                <!--Titulo Principal-->
+                <h1>Kairon Giron</h1>
+
+                <!--Sub titulo-->
+                <h3>Desenvolvedor Back-End | Java, Python & Arquiteturas de Sistemas</h3>
+
+                <!--Descricao-->
+                <p>
+                    Devenvolvedor em formação com foco na construção de sistemas robustos, escaláveis e orientados a regras de negócio reais.
+                    Atualmente desevolvo projetos como um Sistema Bancário Modular com foco em risco, auditoria, concorrência e integridade transacional.
+                    Tenho experiência prática com Java (Back-End), Python (Back-End), MySQL, mogelagem de domínio, versionamento de Git e desenvolvimento Web com HTML, CSS e JavaScript de forma básica.
+                </p>
+
+                <p>
+                    Busco oportunidades onde eu possa evoluir tecnicamente, contribuir com soluções estruturadas e aprofundar meus conhecimentos
+                    em Arquitetura de Software, boas práticas e sistemas de alta responsabilidade, especialmente no setor financeiro.
+                </p>
+                <!--Icones legais-->
+                <div class="sociais">
+                    <div class="circle">🐙</div>
+                    <div class="circle">in</div>
+                    <div class="circle">✉</div>
+                </div>
+
+            </div>
+         </section>
+         <!--||||||SOBRE||||||-->
+         <section id="sobre" class="sobre container">
+            <!--Titulo-->
+            <h2 class="section-title">Sobre mim</h2>
+            <div class="sobre-content">
+                <!--Imagem lateral-->
+                <img src="imagem1.jpg" alt="Dev">
+                <!--Texto-->
+                <div class="text">
+                    <p>
+                        Sou desenvolvedor em formação com foco em back-end e construção de sistemas
+                        orientados a regras de negócios reais. Tenho direcionado meus estudos para arquitetura,
+                        modelagem de domínio e integridade transacional, buscando ir além de projetos simples
+                        e desenvolver soluções com responsabilidade técnica.
+                    </p>
+
+                    <p>
+                        Entre meus principais projetos está uma aplicação bancária desenvolvida em Java, onde
+                        implementei conceitos como controle de saldo, registro de transações, organização
+                        modular e base para tratamento de concorrência e consistência de dados. O objetivo do
+                        projeto não foi apenas "fazer funcionar", mas sim simular um ambiente próximo ao de um
+                        sistema financeiro real, com preocupação em regras de negócio, organização de código e
+                        evolução futura para auditoria e controle de risco.    
+                    </p>
+
+                    <p>
+                        Também desenvolvi um sistema de controle de estoque utilizando HTML, CSS e JavaScript,
+                        focado na manipulação dinâmica de dados no front-end, organização de interface e
+                        clareza na experiência do usuário. O projeto reforçou minha base lógica, estruturação
+                        de funcionalidades e integração entre interfaces e regras de controle.
+                    </p>
+
+                    <p>
+                        Além disso, possuo formação complementar em Back-End com Python, com estudos
+                        voltados para lógica de programação, estruturas de dados, APIs e organização de
+                        aplicações server-side. Essa base fortalece minha capacidade de entender diferentes
+                        paradigmas e escrever códigos limpos, estruturados e escálaveis.
+                    </p>
+
+                    <p>
+                        Meu objetivo é evoluir como desenvolvedor back-end, atuar em ambientes que exijam
+                        responsabilidade técnica e contribuir para a construção de sistemas robustos, seguros e
+                        bem estruturados --- especialmente no contexto corporativo.
+                    </p>
+
+                </div>
+
+            </div>
+         </section>
+
+         <!--||||||PROJETOS||||||-->
+         <section id="projetos" class="projetos">
+            <div class="container">
+                <h2 class="section-title">Projetos</h2>
+
+                <!--Container de cards-->
+                <div class="cards">
+                    <!--Card individual-->
+                    <div class="card">
+                        <h3>Controle de Estoque</h3>
+                        <h4> Sobre </h4>
+                        <p>
+                            Este projeto é um Sistema Completo de Gestão de Estoque desenvolvido para
+                            oferecer controle total sobre produtos, clientes e movimentações comerciais. A aplicação
+                            foi construída com foco em organização, rastreabilidade e eficiência operacional, integrando
+                            múltiplos módulos que trabalham de forma sincronizada.
+                        </p>
+                        <p>
+                            O sistema permite gerenciar desde o cadastro de produtos até o acompanhamento
+                            detalhado de compras e trocas, garantindo uma visão clara e estratégica do estoque.
+                        </p>
+
+                        <h4>Principais funcionalidades</h4>
+                        <h5>Cadastro de Clientes</h5>
+                        <p> - Registro completo de clientes </p>
+                        <p> - Organização de dados para controle de compras </p>  
+                        <p> - Integração histórico de pedidos </p>
+                        </p>
+
+                        <h5>Cadastro de Produtos</h5>
+                        <p> - Nome, preço e quantidade em estoque </p>
+                        <p> - Informações adicionais e observações  </p>
+                        <p> - Atualização automática de estoque após vendas e trocas </p>
+                        
+
+                        <h5>Sistema de Sacola de Compras</h5>
+                        <p> - Adição de múltiplos produtos </p>
+                        <p> - Cálculo automático do total </p>
+                        <p> - Campo de observação do pedidos </p>
+                        <p> - Opção de marcar compra como presente </p>
+                        <p> - Finalização integrada ao histórico </p>
+                    
+
+                        <h5>Histórico de Compras</h5>
+                        <p> - Registro completo de todas as vendas </p>
+                        <p> - Rastreabilidade das movimentações </p>
+                        <p> - Consulta organizada por clientes
+                    
+
+                        <h5>Sistema de Trocas</h5>
+                        <p> - Troca de produtos com ajuste automático de estoque </p>
+                        <p> - Registro no histórico para manter integridade das Informações </p>
+                        <p> - Controle seguro das movimentações </p>
+
+                        <h5>DashBoard e Alertas de Estoque Baixo</h5>
+                        <p> - Identificação automática de produtos com baixo estoque </p>
+                        <p> - Alertas visuais para facilitar a tomada de decisão </p>
+                        <p> - Prevenção de ruptura de estoque
+                        
+
+                        <h5>Tecnologias Utilizadas</h5>
+                        <h6>Front-End</h6>
+                        <p> - HTML5 </p>
+                        <p> - CSS3 </p>
+                        <p> - JavaScript </p>
+                      
+                        <h6>Back-End</h6>
+                        <p> - Node.js </p>
+                        <p> -SQLite3 </p>
+                 
+                        <h6>Arquitetura</h6>
+                        <p> - Padrão MVC (Model View Controller) </p>
+                        <p> - Separação clara entre regras de negócio, interface e banco de dados </p>
+
+                        <h6>Diferenciais do Projeto</h6>
+                        <p> - Estrutura organizada e escalável </p>
+                        <p> - Controle completo de movimentações </p>
+                        <p> - interface funcional e intuitiva </p>
+                        <p> - Atualização automática de estoque </p>
+                        <p> - Registro detalhado de histórico </p>
+                        <p> - Sistema de trocas integrado </p>
+                        <p> - Alertas inteligentes de estoque baixo </p>
+
+                        <h6>Objetivo</h6>
+                        <p>
+                            O objetivo do sistema é oferecer uma solução prática e eficiente para gestão
+                            de estoque e vendas, permitindo um controle estratégico das operações comerciais
+                            e garantindo maior organização e segurança nos processos. 
+                        </p>
+
+                        <!--Link-->
+                        <div class="links">
+                            <a href="#">Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                <h3>Promissum Bank</h3>
+                    <h4>Sobre</h4>
+                    <p>
+                        O Promissum Bank é um sistema bancário modular desenvolvido com foco em
+                        regras de negócios reais do setor financeiro, como controle de transações, auditoria
+                        risco e consistência de dados. O projeto simula a estrutura de um core bancário
+                        simplificado, priorizando arquitetura, segurança e integridade das operações.
+                    </p>
+
+                    <p>
+                        O objetivo não foi apenas "fazer funcionar", mas construir algo próximo do que é exigido
+                        em ambientes financeiros de alta responsabilidade.
+                    </p>
+
+                    <h4>Arquitetura e Tecnologias</h4>
+                    <p> - Java (orintação a objetos e modelagem de domínio) </p>
+                    <p> - SQLite3 para banco de dados</p>
+
+                    <h4> Estrutura modular separando: </h4>
+                        <p> - Domínio (regras de negócio) </p>
+                        <p> - Serviços </p>
+                        <p> - Camada de persistência </p>
+                    <p> - Controle de concorrência em operações críticas </p>
+                    <p> - Estrutura preparada para futura evolução para API REST </p>
+
+                    <h4>Principais Funcionalidades</h4>
+                    <p> - Abertura de contas com status (ativa, bloqueada, encerrada) </p>
+                    <p> - Depósito, saque e transferência entre contas </p>
+                    <p> - Registro de transações para auditoria </p>
+                    <p> - Preparação para rollback de operações </p>
+                    <p> - Estrutura pensada para evitar inconsistência de saldo</p>
+
+                </div>
+            </div>
+         </section>
+
+    </body>
+ </html>
