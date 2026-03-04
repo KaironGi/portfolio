@@ -1,0 +1,326 @@
+/*Reset básico para remover margens padrão do navegador*/
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box; /*Evita problemas de largura*/
+    font-family: 'Poppins', sans-serif; /*Fonte*/
+    scroll-behavior: smooth; /*Scroll leve ao clicar no menu*/
+}
+
+/*Fundo*/
+body {
+    background: #000;
+    color: #fff;
+    overflow-x: hidden; /*Bloqueia scroll horinzontal*/
+}
+
+/*Container Central com largura maxima*/
+.container{
+    width:90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/*Header Fixo*/
+.header {
+    position:fixed; /*Fica preso no top*/
+    width:100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /*Fundo foda semi-transparente*/
+    backdrop-filter: blur(10px); /*Efeito de vidro*/
+    border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+    z-index: 1000;
+    transition: 0.3s ease;
+}
+
+/*Quando rolar a pag, o header fica compacto*/
+.header.scrolled {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(168, 85, 247, 0.4);
+}
+
+/*Organização do header*/
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Logo*/
+.logo {
+    font-weight: 600;
+    font-size: 22px;
+    color: #c084fc;
+}
+
+.menu a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+/*Linha animada hihi :3*/
+.menu a::after {
+    content: "";
+    position: absolute;
+    left:0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #c084fc;
+    transition: 0.3s;
+}
+
+/*Hover no link*/
+.menu a:hover{
+color: #fff;
+}
+
+/*Animação na linha*/
+.menu a:hover::after {
+    width: 100%;
+}
+
+/*Hero Section*/
+.hero {
+    height: 100vh; /*Ocupa toda a altura da tela*/
+    background: radial-gradient(circle at top left, #4c1d95, #000 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px; /*Compensa o header fixo*/
+}
+/*Titulo principal*/
+.hero h1 {
+    font-size: 70px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #c084fc, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*Subtitulo*/
+.hero h3 {
+    margin: 20px 0;
+    font-weight: 400;
+    color: #bbb;
+}
+
+/*Textinhos*/
+.hero p {
+    max-width: 600px;
+    margin: auto;
+    color: #888;
+    line-height: 1.6;
+}
+
+/*||||||ÌCONES SOCIAIS COM GLOW||||||*/
+.socials {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/*Circulos sociais*/
+.circle {
+    width: 55px;
+    height: 55px;
+    background: #111;
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/*Efeito ao passar o mouse*/
+.circle:hover {
+    background: #9333ea;
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
+}
+
+/*||||||TITULO DAS SEÇÕES||||||*/
+.section-title {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 70px;
+    color: #c084fc;
+}
+
+/*||||||SOBRE||||||*/
+.sobre {
+    padding: 120px 0;
+}
+
+/*Layout lado a lado*/
+.sobre-content {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+/*Imagem com sombra leve*/
+.sobre img {
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.2);
+}
+
+/*Texto*/
+.sobre .text p {
+    margin-bottom: 20px;
+    color: #aaa;
+    line-height: 1.7;
+}
+
+/*||||||PROJETOS||||||*/
+.projetos {
+    padding: 120px 0;
+    background: linear-gradient(180deg, #140028, #000);
+}
+
+/*Container dos Cards*/
+.cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /*Permite quebrar linha no responsivo*/
+}
+
+ /*Card individual*/
+.card {
+    background: #0f0f0f;
+    border: 1px solid rgba(168, 85, 247, 0.15);
+    padding: 25px;
+    border-radius: 20px;
+    flex: 1 1 320px;
+    transition: 0.4s ease;
+}
+
+/*Hover do card*/
+.card:hover {
+    transform: translateY(-10px);
+    border: 1px solid rgba(168, 85, 247, 0.6);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.3);
+}
+
+/*Imagem do projeto*/
+.card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/*Tags de tecnologia*/
+.tags span {
+background: rgba(168, 85, 247, 0.2);
+padding: 6px 12px;
+border-radius: 20px;
+font-size: 12px;
+margin-right: 8px;
+}
+
+/*||||||HABILIDADES||||||*/
+.skill {
+    margin-bottom: 35px;
+}
+
+/*Barra externa*/
+.bar {
+    width: 100%;
+    height: 8px;
+    background: #1a1a1a;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/*Barra interna animada*/
+.progress {
+    height: 8px;
+    background: linear-gradient(90deg, #9333ea, #c084fc);
+    border-radius: 8px;
+    width: 0; /*Começa zerada pois vou animar no JS*/
+    transition: width 1.5s ease;
+}
+
+/*||||||CONTATO||||||*/
+.contato {
+    padding: 120px 0;
+    background: linear-gradient(180deg, #140028, #000);
+}
+
+/*Layout contato*/
+.contato-content {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/*Campos do formulario*/
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    transition: 0.3;
+}
+
+/*Efeito*/
+.form input:focus,
+.form textarea:focus {
+    border-color: #9333ea;
+    outline: none;
+}
+
+/*Botão*/
+.form button {
+    width:100%;
+    padding: 15px;
+    background: linear-gradient(90deg, #2d0157, #190131);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3;
+}
+
+/*Hover botão*/
+.form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+}
+
+/*||||||FOOTER||||||*/
+.footer {
+    text-align: center;
+    padding: 40px 0;
+    background: #000;
+    border-top: 1px solid rgba(168, 85, 247, 0.2);
+    color: #888;
+}
+
+/*||||||RESPONSIVIDADE||||||*/
+@media (max-width: 900px) {
+    /*Empilha conteúdo no Mobile*/
+    .sobre-content,
+    .contato-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre img {
+        width: 100%;
+    }
+}
