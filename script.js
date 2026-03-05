@@ -1,89 +1,77 @@
-//Menu Mobile
+// ===============================
+// MENU MOBILE
+// ===============================
 
-//Seleciona o botão Hamburguer
 const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".menu");
 
-//Seleciona a navegação
-const nav = document.querySelector("nav");
-
-//Evento de clique para abrir e fechar menu
 menuToggle.addEventListener("click", () => {
-    //alterna a classe active
-    //se existir, remove. Se não existir, adiciona
     nav.classList.toggle("active");
 });
 
-//Scroll suave entre seções
 
-//Seleciona todos os links que começam com #
+// ===============================
+// SCROLL SUAVE ENTRE SEÇÕES
+// ===============================
+
 const linksInternos = document.querySelectorAll('a[href^="#"]');
 
-//Para cada link interno
 linksInternos.forEach(link => {
-    link.addEventListener("click", function (event){
-       //Impede pulo brusco
-       event.preventDefault();
-       
-       //Pega o destino do link (Ex: #sobre)
-       const targetId = this.getAttribute("href");
+    link.addEventListener("click", function (event) {
+        event.preventDefault();
 
-       const section = document.querySelector(targetId);
+        const targetId = this.getAttribute("href");
+        const section = document.querySelector(targetId);
 
-       //Scroll suave até a seção
-       section.scrollIntoView({
-        behavior:"smooth",
-        block: "start"
-       });
+        if (section) {
+            section.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
 
-       //Fecha menu mobile se estiver aberto
-       nav.classList.remove("active");
-    })
-})
+        // Fecha menu no mobile após clicar
+        nav.classList.remove("active");
+    });
+});
 
-//Header com efeito 
-const header = document.querySelector("header");
 
-//Evento de scroll da pag
+// ===============================
+// HEADER COM EFEITO AO ROLAR
+// ===============================
+
+const header = document.querySelector(".header");
+
 window.addEventListener("scroll", () => {
-    //Se a pagina estiver rolada mais de 50px
     if (window.scrollY > 50) {
-        //Adiciona classe pra mudar visual
         header.classList.add("scrolled");
     } else {
-    //Remove se voltar ao topo
-    header.classList.remove("scrolled");
+        header.classList.remove("scrolled");
     }
-})
+});
 
-//ANIMAÇÂO REVEAL AO APARECER NA TELA
 
-//Seleciona todos elementos que terão animação
-const revealElements = document.querySelectorAll(".reveal");
+// ===============================
+// BOTÃO VOLTAR AO TOPO
+// ===============================
 
-//Cria observer (observador de visibilidade)
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        //Se elemento estiver visivel
-        if (entry.isIntersecting) {
-            //adiciona classe pra animar
-            entry.target.classList.add("visible");
-        } 
+const btnTop = document.createElement("button");
+btnTop.innerText = "↑";
+btnTop.classList.add("btn-top");
+
+document.body.appendChild(btnTop);
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        btnTop.style.display = "block";
+    } else {
+        btnTop.style.display = "none";
+    }
+});
+
+btnTop.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
     });
-}, {
-    threshold: 0.2 // ativa quando 20% do elemento aparece
 });
-
-//Aplica o observer em cada elemento
-revealElements.forEach(element => {
-    observer.observe(element);
-});
-
-//Contador animado
-
-//Seleciona elementos com classe counter
-const counter = document.querySelectorAll(".counter");
-
-//Função para animar números
-counters.forEach(counter => {
-    counter.innerText = "0";
-})
