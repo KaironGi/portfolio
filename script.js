@@ -75,3 +75,18 @@ btnTop.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+
+const form = document.getElementById('contactForm');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm('service_ndq94h4', 'template_3r7qm1j', this)
+    .then(() => {
+      alert('Mensagem enviada com sucesso!');
+      form.reset();
+    }, (error) => {
+      console.error('Erro:', error);
+      alert('Erro ao enviar a mensagem.');
+    });
+});

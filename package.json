@@ -1,0 +1,26 @@
+{
+  "name": "portifolio",
+  "version": "1.0.0",
+  "description": "Este é meu portfólio pessoal desenvolvido para apresentar meus projetos, habilidades e evolução como desenvolvedor.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaironGi/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KaironGi/portfolio/issues"
+  },
+  "homepage": "https://github.com/KaironGi/portfolio#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "nodemailer": "^8.0.1"
+  }
+}

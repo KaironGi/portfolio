@@ -284,10 +284,10 @@
                 </div>
 
                 <!--Formulário-->
-                <form class="form">
-                    <input type="text" placeholder="Seu nome..." required>
-                    <input type="text" placeholder="seu@email.com" required>
-                    <textarea rows="5" placeholder="Sua mensagem..." required></textarea>
+                <form id="contactForm " class="form">
+                    <input type="text" name= "name" placeholder="Seu nome..." required>
+                    <input type="text" name = "email" placeholder="seu@email.com" required>
+                    <textarea name= "mensagem" rows="5" placeholder="Sua mensagem..." required></textarea>
                     <button type="submit">Enviar Mensagem</button>
                 </form>
 
@@ -301,6 +301,14 @@
 
         <!--JavaScript-->
         <script src="script.js"></script>
+
+        <!--Biblioteca do email-->
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init('X6jFndVOS9t2xhiaQ');
+            })();
+        </script>
         
     </body>
  </html>
