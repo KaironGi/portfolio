@@ -219,6 +219,10 @@ color: #fff;
     margin-bottom: 15px;
 }
 
+.card:hover img {
+    transform: scale(1.1)
+}
+
 /*Tags de tecnologia*/
 .tags span {
 background: rgba(168, 85, 247, 0.2);
