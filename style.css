@@ -192,6 +192,8 @@ color: #fff;
 .cards {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 }
