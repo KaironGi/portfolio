@@ -528,3 +528,115 @@ button,
     transform: translateY(-2px);
     box-shadow: 0 6px 18px rgba(123, 47, 247, 0.5);
 }
+
+/* ========================================= */
+/* RESPONSIVIDADE EXTRA */
+/* ========================================= */
+
+/* Tablets */
+@media (max-width: 1100px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+}
+
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .hero {
+        padding-top: 120px;
+        height: auto;
+        padding-bottom: 80px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h3 {
+        font-size: 18px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+
+    /* SOBRE */
+
+    .sobre-content {
+        gap: 40px;
+    }
+
+    .sobre img {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    /* PROJETOS */
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+}
+
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero h3 {
+        font-size: 16px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .circle {
+        width: 48px;
+        height: 48px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .tags span {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+}
