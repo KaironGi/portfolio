@@ -77,8 +77,8 @@ O projeto foi estruturado para funcionar corretamente em:
 
 Caso queira conversar ou propor alguma oportunidade:
 
-- 📧 Email: seuemail@email.com
-- 💼 LinkedIn: (adicione seu link)
+- 📧 Email: gironkairon@gmail.com
+- 💼 LinkedIn: https://www.linkedin.com/in/kairon-giron-23b4302a9/
 - 🐙 GitHub: https://github.com/KaironGi
 
 ---
