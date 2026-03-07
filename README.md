@@ -11,7 +11,6 @@ O objetivo deste projeto é consolidar meus conhecimentos em desenvolvimento fro
 - HTML5
 - CSS3
 - JavaScript
-- Design inspirado em layout moderno (Dark + Gradiente)
 
 ---
 
@@ -50,7 +49,6 @@ portfolio/
 - Seção de projetos em formato de cards
 - Barras visuais de habilidades
 - Formulário de contato
-- Design responsivo
 
 ---
 
@@ -66,7 +64,6 @@ O projeto foi estruturado para funcionar corretamente em:
 
 ## 🔮 Próximas Melhorias
 
-- Integração real do formulário com backend
 - Animações mais avançadas
 - Melhorias em acessibilidade (A11Y)
 - Otimização de performance
